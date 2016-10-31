@@ -7,7 +7,6 @@ class Content extends Component {
         super(props)
     }
     _onPress(){
-        // console.log(1);
         var {navigator} = this.props
         navigator.pop()
     }
