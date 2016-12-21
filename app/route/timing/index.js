@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {StyleSheet, Text, View, Animated, Easing} from 'react-native'
 import styles from './styles'
+import Header from '../../component/header'
 
 class App extends Component {
   constructor(props) {
@@ -23,6 +24,7 @@ class App extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <Header center={"Timing"} left={true} {...this.props} />
         <View style={styles.main}>
           <View style={styles.block}>
             <View style={styles.blockTop}>

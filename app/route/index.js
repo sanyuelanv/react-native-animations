@@ -1,7 +1,9 @@
 import React, {Component} from 'react'
 import Home from './home'
+import Spring from './spring'
+import Timing from './timing'
+import Decay from './decay'
 
-import Header from '../component/header'
 import {Navigator, Text, StyleSheet, View} from 'react-native'
 
 const routeStack = [
@@ -16,11 +18,33 @@ class App extends Component {
     super(props)
   }
   renderScene(route, navigator) {
-    let Item = route.component
-    return <Item navigator={navigator} route={route} routes ={routeStack}/>
+    switch (route.id) {
+      case "Spring":
+        return (<Spring navigator={navigator} />)
+        break
+      case "Timing":
+        return (<Timing navigator={navigator} />)
+        break
+      case "Decay":
+        return (<Decay navigator={navigator} />)
+        break
+      default:
+        return (<Home navigator={navigator} />)
+    }
   }
   render() {
-    return (<Navigator initialRouteStack={routeStack} initialRoute={routeStack[0]} renderScene={this.renderScene.bind(this)} navigationBar={Header()}/>)
+    return (
+      <Navigator
+        initialRoute={{ id: 'home' }}
+        renderScene={this.renderScene.bind(this)}
+        configureScene={(route) => {
+          if (route.sceneConfig) {
+            return route.sceneConfig;
+          }
+          return Navigator.SceneConfigs.FloatFromRight;
+        }}
+      />
+    )
   }
 }
 

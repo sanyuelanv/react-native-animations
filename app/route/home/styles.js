@@ -1,8 +1,6 @@
 export default styles = {
   container: {
     flex: 1,
-    alignItems: 'center',
-    paddingTop: 40,
   },
   main: {
     flex: 1,
@@ -10,17 +8,17 @@ export default styles = {
   },
   scroll: {
     flex: 1,
-    backgroundColor: '#f7f7f7',
+    // backgroundColor: '#f7f7f7',
   },
   bottomView: {
-    marginTop: 30,
+    // marginTop: 10,
   },
   button: {
     height: 50,
-    borderBottomColor: '#f1f1f1',
+    borderBottomColor: '#dddddd',
     borderBottomWidth: 1,
     borderStyle: 'solid',
-    backgroundColor: '#ffffff',
+    backgroundColor: '#f9f9f9',
     justifyContent: 'center',
     paddingLeft: 20,
   },

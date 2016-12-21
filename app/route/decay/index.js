@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import {StyleSheet, Text, View, Animated, Easing} from 'react-native'
 import styles from './styles'
+import Header from '../../component/header'
 
 class App extends Component {
   constructor(props) {
@@ -12,22 +13,23 @@ class App extends Component {
   _startBurnsZoom() {
     this.state.burns.setValue(1)
     Animated.decay(this.state.burns, {
-      velocity: 1,
-      deceleration: 1,
+      velocity: 1,                    // sublte zoom
+      deceleration: 0.9999,           // slow decay
     }).start()
   }
-  componentDidMount() {
+  componentWillMount() {
     this._startBurnsZoom()
   }
   render() {
     return (
       <View style={styles.container}>
+        <Header center={"decay"} left={true} {...this.props} />
         <View style={styles.main}>
           <View style={styles.block}>
             <View style={styles.blockTop}>
               <Text style={styles.topText}>timing:  以一个初始速度开始并且逐渐减慢停止
               </Text>
-              <Text style={styles.topText}>velocity: 速==速度
+              <Text style={styles.topText}>velocity: 速度
               </Text>
               <Text style={styles.topText}>deceleration： 速度衰减比例，默认为0.997</Text>
             </View>
@@ -42,7 +44,6 @@ class App extends Component {
                   ]
                 }
               ]}>
-              <Text style={styles.animationText}>{this.state.text}</Text>
               </Animated.View>
             </View>
           </View>
