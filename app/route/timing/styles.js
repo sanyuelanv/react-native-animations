@@ -28,21 +28,13 @@ export default styles = {
     fontSize:16,
     color:"#555",
   },
+  text:{
+    fontSize:20,
+    color:"#000"
+  },
   descText:{
     fontSize:20,
     color:"#000",
     marginBottom:10,
-  },
-  animation:{
-    width:100,
-    height:100,
-    backgroundColor:"#fff000",
-    justifyContent:'center',
-    alignItems:"center",
-  },
-  animationText:{
-    fontSize:20,
-    color:"#555",
   }
-
 }

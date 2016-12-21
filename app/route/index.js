@@ -1,27 +1,26 @@
 import React, {Component} from 'react'
 import Home from './home'
-import {Navigator} from 'react-native'
 
+import Header from '../component/header'
+import {Navigator, Text, StyleSheet, View} from 'react-native'
 
 const routeStack = [
-    {name:"home",component:Home}
+  {
+    name: "主页",
+    index: 0,
+    component: Home
+  },
 ]
-
-class App extends Component{
+class App extends Component {
   constructor(props) {
     super(props)
   }
-  renderScene(route,navigator){
+  renderScene(route, navigator) {
     let Item = route.component
-    return <Item navigator={navigator} route={route} />
+    return <Item navigator={navigator} route={route} routes ={routeStack}/>
   }
-  render(){
-    return (
-      <Navigator
-        initialRouteStack = {routeStack}
-        renderScene = {this.renderScene.bind(this)}
-      />
-    )
+  render() {
+    return (<Navigator initialRouteStack={routeStack} initialRoute={routeStack[0]} renderScene={this.renderScene.bind(this)} navigationBar={Header()}/>)
   }
 }
 
