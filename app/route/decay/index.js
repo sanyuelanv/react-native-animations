@@ -17,7 +17,7 @@ class App extends Component {
       deceleration: 0.9999,           // slow decay
     }).start()
   }
-  componentWillMount() {
+  componentDidMount() {
     this._startBurnsZoom()
   }
   render() {
