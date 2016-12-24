@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, Animated} from 'react-native'
 import styles from './styles'
 import Header from '../../component/header'
 
-class App extends Component {
+class Spring extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -62,4 +62,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default Spring

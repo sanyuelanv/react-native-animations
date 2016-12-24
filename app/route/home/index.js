@@ -4,7 +4,7 @@ import styles from './styles'
 import Button from './button'
 import Header from '../../component/header'
 
-class App extends Component {
+class Home extends Component {
   constructor(props) {
     super(props)
   }
@@ -18,6 +18,7 @@ class App extends Component {
               <Button name="Timing动画" page='Timing' {...this.props}/>
               <Button name="Spring动画" page='Spring' {...this.props}/>
               <Button name="decay动画" page='Decay' {...this.props}/>
+              <Button name="组合动画" page='Combin' {...this.props}/>
             </View>
           </ScrollView>
         </View>
@@ -26,4 +27,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default Home

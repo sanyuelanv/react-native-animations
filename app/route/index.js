@@ -3,6 +3,7 @@ import Home from './home'
 import Spring from './spring'
 import Timing from './timing'
 import Decay from './decay'
+import Combin from './combin'
 
 import {Navigator, Text, StyleSheet, View} from 'react-native'
 
@@ -27,6 +28,9 @@ class App extends Component {
         break
       case "Decay":
         return (<Decay navigator={navigator} />)
+        break
+      case "Combin":
+        return (<Combin navigator={navigator} />)
         break
       default:
         return (<Home navigator={navigator} />)

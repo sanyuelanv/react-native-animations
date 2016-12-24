@@ -3,7 +3,7 @@ import {StyleSheet, Text, View, Animated, Easing} from 'react-native'
 import styles from './styles'
 import Header from '../../component/header'
 
-class App extends Component {
+class Decay extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -53,4 +53,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default Decay
