@@ -18,7 +18,7 @@ class Home extends Component {
               <Button name="Timing动画" page='Timing' {...this.props}/>
               <Button name="Spring动画" page='Spring' {...this.props}/>
               <Button name="decay动画" page='Decay' {...this.props}/>
-              <Button name="组合动画" page='Combin' {...this.props}/>
+              <Button name="简单手势" page='PanResponder' {...this.props}/>
             </View>
           </ScrollView>
         </View>

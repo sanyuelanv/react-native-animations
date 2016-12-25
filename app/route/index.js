@@ -4,6 +4,7 @@ import Spring from './spring'
 import Timing from './timing'
 import Decay from './decay'
 import Combin from './combin'
+import Panresponder from './panresponder'
 
 import {Navigator, Text, StyleSheet, View} from 'react-native'
 
@@ -31,6 +32,9 @@ class App extends Component {
         break
       case "Combin":
         return (<Combin navigator={navigator} />)
+        break
+      case "PanResponder":
+        return (<Panresponder navigator={navigator} />)
         break
       default:
         return (<Home navigator={navigator} />)
