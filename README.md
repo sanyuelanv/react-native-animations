@@ -7,4 +7,4 @@
 动画主要包括decay，timing，spring三种，而动画是为了交互存在的。所以在这里面新增一个手势动画，为前三者动画和手势事件的关联。同时也简略写了一个手势的例子。
 
 ## UI
-![UI](https://raw.githubusercontent.com/sanyuelanv/react-native-animations/master/screenshots/1.png)
+![UI截图](https://raw.githubusercontent.com/sanyuelanv/react-native-animations/master/screenshots/1.png)
