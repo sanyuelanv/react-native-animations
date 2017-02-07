@@ -39,7 +39,7 @@ class PanResponderTest extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Header center={"手势"} left={true} {...this.props} />
+        <Header center={"简单手势"} left={true} {...this.props} />
         <View style={styles.main}>
           <View style={styles.block} {...this._panResponder.panHandlers}>
             <Text style={styles.blockText}>{this.state.text}</Text>

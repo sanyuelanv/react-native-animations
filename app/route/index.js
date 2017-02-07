@@ -5,6 +5,7 @@ import Timing from './timing'
 import Decay from './decay'
 import Combin from './combin'
 import Panresponder from './panresponder'
+import PanresAnimate from "./panresAnimate"
 
 import {Navigator, Text, StyleSheet, View} from 'react-native'
 
@@ -35,6 +36,9 @@ class App extends Component {
         break
       case "PanResponder":
         return (<Panresponder navigator={navigator} />)
+        break
+      case "PanresAnimate":
+        return (<PanresAnimate navigator={navigator} />)
         break
       default:
         return (<Home navigator={navigator} />)
